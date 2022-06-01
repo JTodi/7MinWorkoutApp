@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="@dimen/main_screen_main_layout_padding">
+
+    <ImageView
+        android:id="@+id/myImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/flStart"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/app_image_start"
+        android:layout_height="220dp"/>
+
+    <FrameLayout
+        android:id="@+id/flStart"
+        app:layout_constraintTop_toBottomOf="@+id/myImage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/item_color_accent_border_ripple_background"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/default_text_size_buttons"
+            android:layout_gravity="center"
+            android:text="START"
+            android:fontFamily="monospace"
+            android:textColor="#EAA541"/>
+        
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flStart"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnBmi"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/bmi"
+            android:layout_marginRight="100dp"
+            />
+
+        <ImageButton
+            android:id="@+id/btnHistory"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/history"
+            />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
